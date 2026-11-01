@@ -1,0 +1,75 @@
+/* GSTS website. Tokens from apps/ios/DESIGN.md: warm paper by day, ink by night, signal red to ember. */
+:root {
+  --page: #f6f2ea;
+  --card: #ffffff;
+  --text: #1b1b1d;
+  --muted: #5d5a55;
+  --line: #e4ddd0;
+  --brand-a: #e5432d;
+  --brand-b: #ff8a3d;
+  --link: #c23a22;
+  --serif: "New York", ui-serif, Georgia, "Noto Serif", "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Noto Sans Devanagari",
+    "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0e0e0f;
+    --card: #1b1b1d;
+    --text: #f3efe8;
+    --muted: #a9a39a;
+    --line: #2c2b2e;
+    --link: #ff8a3d;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font: 17px/1.6 var(--sans);
+}
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 3px solid var(--brand-b); outline-offset: 2px; }
+.skip { position: absolute; inset-inline-start: -999px; }
+.skip:focus { inset-inline-start: 16px; top: 8px; background: var(--card); padding: 8px 12px; }
+.top, main, footer { max-width: 720px; margin: 0 auto; padding-inline: 16px; }
+.top { display: flex; justify-content: space-between; align-items: center; padding-block: 16px; gap: 16px; }
+.top span { display: flex; gap: 20px; }
+.top a { color: var(--text); text-decoration: none; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+.top a[aria-current] { color: var(--link); }
+.brand {
+  font: 900 22px/1 var(--serif);
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, var(--brand-a), var(--brand-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+h1, h2, h3 { font-family: var(--serif); font-weight: 800; line-height: 1.2; }
+h1 { font-size: 2.2rem; margin: 24px 0 8px; }
+h2 { font-size: 1.4rem; margin: 36px 0 8px; }
+h3 { font-size: 1.15rem; margin: 24px 0 4px; }
+.hero {
+  margin: 8px 0 24px;
+  padding: 40px 24px;
+  border-radius: 24px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-a), var(--brand-b));
+}
+.hero h1 { font-size: clamp(2.2rem, 8vw, 3.4rem); margin: 0 0 12px; }
+.hero p { font-size: 1.15rem; margin: 0; max-width: 32em; }
+.lead { font-size: 1.1rem; color: var(--muted); }
+ul, ol { padding-inline-start: 1.3em; }
+li { margin-block: 4px; }
+.index { list-style: none; padding: 0; }
+.index li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; margin-block: 10px; }
+.index a { font-weight: 700; display: block; }
+.index span { color: var(--muted); font-size: 0.95rem; }
+footer { margin-top: 56px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+footer summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.langs { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.langs a { display: inline-flex; min-height: 44px; align-items: center; }
+.langs a[aria-current] { font-weight: 700; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

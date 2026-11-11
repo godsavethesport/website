@@ -1,4 +1,4 @@
-/* GSTS website. "2 Quiet" colours (docs/design/phone-colours.md, 2026-11-10) and B The Cause's poster opening (2026-11-05). */
+/* GSTS website. "2 Quiet" colours (docs/design/phone-colours.md, 2026-11-10), brand fluo + navy (docs/design/logo.md, 2026-11-11: fluo never as text or thin lines on light pages) and B The Cause's poster opening (2026-11-05). */
 @font-face {
   font-family: "Big Shoulders Display";
   src: url("/fonts/big-shoulders-display.woff2") format("woff2");
@@ -11,9 +11,12 @@
   --text: #15181b;
   --muted: #5e656c;
   --line: #dadde0;
-  --brand-a: #c23a26;
-  --brand-b: #c23a26;
-  --link: #c23a26;
+  --navy: #1c2b45;
+  --navy-deep: #14223a;
+  --fluo: #e3fa2b;
+  --brand-a: var(--navy);
+  --brand-b: var(--navy);
+  --link: var(--navy);
   --poster: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
   --serif: "New York", ui-serif, Georgia, "Noto Serif", "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Noto Sans Devanagari",
@@ -26,7 +29,9 @@
     --text: #eceef0;
     --muted: #9aa1a8;
     --line: #2a2e33;
-    --link: #f0705a;
+    --link: var(--fluo);
+    --brand-a: var(--fluo);
+    --brand-b: var(--fluo);
   }
 }
 * { box-sizing: border-box; }
@@ -63,7 +68,7 @@ h3 { font-size: 1.15rem; margin: 24px 0 4px; }
   padding: 40px 24px;
   border-radius: 24px;
   color: #fff;
-  background: linear-gradient(135deg, var(--brand-a), var(--brand-b));
+  background: var(--navy-deep);
 }
 .hero h1 { font-size: clamp(2.2rem, 8vw, 3.4rem); margin: 0 0 12px; }
 .hero p { font-size: 1.15rem; margin: 0; max-width: 32em; }
@@ -85,7 +90,7 @@ footer summary { cursor: pointer; min-height: 44px; display: flex; align-items: 
 body.home { overflow-x: clip; }
 body.home main, body.home .top, body.home footer { max-width: 1040px; }
 body.home .hero {
-  background: #0a0a0a;
+  background: var(--navy-deep);
   color: #ffffff;
   text-align: start;
   padding: clamp(32px, 6vw, 64px) clamp(20px, 5vw, 56px);
@@ -108,7 +113,7 @@ body.home .hero h1::after {
   width: 2.2em;
   height: 0.12em;
   margin-top: 0.18em;
-  background: #e8412c;
+  background: var(--fluo);
 }
 body.home .hero p {
   margin: 24px 0 0;

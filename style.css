@@ -1,25 +1,32 @@
-/* GSTS website. Tokens from apps/ios/DESIGN.md: warm paper by day, ink by night, signal red to ember. */
+/* GSTS website. "2 Quiet" colours (docs/design/phone-colours.md, 2026-11-10) and B The Cause's poster opening (2026-11-05). */
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url("/fonts/big-shoulders-display.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
 :root {
-  --page: #f6f2ea;
+  --page: #eef0f1;
   --card: #ffffff;
-  --text: #1b1b1d;
-  --muted: #5d5a55;
-  --line: #e4ddd0;
-  --brand-a: #e5432d;
-  --brand-b: #ff8a3d;
-  --link: #c23a22;
+  --text: #15181b;
+  --muted: #5e656c;
+  --line: #dadde0;
+  --brand-a: #c23a26;
+  --brand-b: #c23a26;
+  --link: #c23a26;
+  --poster: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
   --serif: "New York", ui-serif, Georgia, "Noto Serif", "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Noto Sans Devanagari",
     "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --page: #0e0e0f;
-    --card: #1b1b1d;
-    --text: #f3efe8;
-    --muted: #a9a39a;
-    --line: #2c2b2e;
-    --link: #ff8a3d;
+    --page: #101214;
+    --card: #1a1d20;
+    --text: #eceef0;
+    --muted: #9aa1a8;
+    --line: #2a2e33;
+    --link: #f0705a;
   }
 }
 * { box-sizing: border-box; }
@@ -78,27 +85,42 @@ footer summary { cursor: pointer; min-height: 44px; display: flex; align-items: 
 body.home { overflow-x: clip; }
 body.home main, body.home .top, body.home footer { max-width: 1040px; }
 body.home .hero {
-  background: none;
-  color: var(--text);
-  text-align: center;
-  padding: 48px 0 8px;
-  margin: 0;
+  background: #0a0a0a;
+  color: #ffffff;
+  text-align: start;
+  padding: clamp(32px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  margin: 8px 0 0;
+  border-radius: 0;
 }
 body.home .hero h1 {
-  font-size: clamp(2.8rem, 9vw, 5.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  background: linear-gradient(90deg, var(--brand-a), var(--brand-b));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-family: var(--poster);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(3.6rem, 15vw, 10rem);
+  line-height: 0.86;
+  letter-spacing: -0.005em;
+  margin: 0;
+  color: #ffffff;
+}
+body.home .hero h1::after {
+  content: "";
+  display: block;
+  width: 2.2em;
+  height: 0.12em;
+  margin-top: 0.18em;
+  background: #e8412c;
 }
 body.home .hero p {
-  margin: 16px auto 0;
-  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
-  line-height: 1.4;
-  color: var(--muted);
-  max-width: 28em;
+  margin: 24px 0 0;
+  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+  line-height: 1.35;
+  color: #ffffff;
+  max-width: 26em;
+}
+:lang(ar) body.home .hero h1, body.home:lang(ar) .hero h1, :lang(ja) .hero h1, :lang(ko) .hero h1 {
+  font-family: var(--serif);
+  text-transform: none;
+  line-height: 1.1;
 }
 .phone { margin: 0; }
 .phone img {
@@ -108,7 +130,7 @@ body.home .hero p {
   border-radius: 13% / 6%;
   border: 9px solid #1b1b1d;
   background: #1b1b1d;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.08), 0 30px 60px -20px rgb(80 40 20 / 0.35);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.08), 0 30px 60px -20px rgb(20 30 40 / 0.35);
 }
 .hero-shot {
   position: relative;
@@ -120,7 +142,7 @@ body.home .hero p {
   position: absolute;
   inset: 10% -40% 0;
   z-index: -1;
-  background: radial-gradient(closest-side, rgb(255 138 61 / 0.35), transparent);
+  background: radial-gradient(closest-side, rgb(194 58 38 / 0.22), transparent);
   filter: blur(20px);
 }
 .feature, .plain { padding-block: clamp(40px, 8vw, 88px); border-top: 1px solid var(--line); }

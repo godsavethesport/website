@@ -1,0 +1,27 @@
+# GSTS (God Save the Sport)
+
+> Get the most from your own data, to reach your own goals. On your phone, with no account.
+
+GSTS is a sports-data app for iPhone and Android. It reads Apple Health or Health Connect and keeps everything on the phone: no account, no tracking, no ads. Swimming, running and cycling first.
+
+## Pages
+- [Privacy policy](https://godsavethesport.com/privacy/): What the GSTS app and this website do with your data. In short: the app keeps everything on your phone.
+- [Support](https://godsavethesport.com/support/): Answers to common questions, and how to reach us.
+
+## Help
+- [Getting started](https://godsavethesport.com/help/getting-started/): Install GSTS, allow access to your health data, and see your own numbers in under two minutes.
+- [Your dashboard](https://godsavethesport.com/help/today/): What each tile and chart shows, and what "vs your average" means.
+- [Workouts](https://godsavethesport.com/help/workouts/): Your workouts by sport, and what each value means.
+- [Training load and form](https://godsavethesport.com/help/training-load/): How GSTS measures how hard you train, in plain words.
+- [Maximum heart rate](https://godsavethesport.com/help/max-heart-rate/): Where GSTS gets your maximum heart rate, and how to change it.
+- [GSTS Pro](https://godsavethesport.com/help/gsts-pro/): What Pro adds, how to buy it once, and how to restore it on a new phone.
+- [Export your data](https://godsavethesport.com/help/export/): Save your workouts and daily values as CSV or JSON files.
+- [Connect your phone to your PC (testers)](https://godsavethesport.com/help/connect-pc/): Send your workouts from the phone to GSTS on your own PC over your home Wi-Fi, by scanning a QR code.
+- [Your training plans](https://godsavethesport.com/help/training-plans/): Save workouts, scan a sheet, build plans and compare with what you swam.
+- [Privacy](https://godsavethesport.com/help/privacy/): What stays on your phone, what GSTS never collects, and how to delete everything.
+- [Troubleshooting](https://godsavethesport.com/help/troubleshooting/): No data, missing workouts, changed permissions, a watch that doesn't sync.
+- [Heart rate variability](https://godsavethesport.com/help/hrv/): What HRV means in GSTS and why iPhone and Android show different numbers.
+- [Strokes in your swims](https://godsavethesport.com/help/strokes/): Stroke counts, stroke types and why some swims have no stroke column.
+- [Swims without lengths](https://godsavethesport.com/help/swim-lengths/): Why a swim shows only its total, with no lengths or splits.
+- [Reading your full history](https://godsavethesport.com/help/full-history/): How GSTS reads your past workouts, and why Android asks once more.
+- [Your training on the web](https://godsavethesport.com/help/web-training/): Open a year, then a month, a week, a day and a workout, with the same totals at every level.
